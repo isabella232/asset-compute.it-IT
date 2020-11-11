@@ -2,10 +2,10 @@
 title: Introduzione alla [!DNL Asset Compute Service].
 description: '[!DNL Asset Compute Service] è un servizio di elaborazione delle risorse nativo del cloud che riduce la complessità e migliora la scalabilità.'
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 2%
+source-wordcount: '321'
+ht-degree: 0%
 
 ---
 
@@ -20,13 +20,13 @@ Gli sviluppatori possono collegare applicazioni di risorse personalizzate (o &qu
 
 >[!NOTE]
 >
->Al momento, [!DNL Asset Compute Service] è possibile utilizzare il modulo solo [!DNL Experience Manager] come Cloud Service. Gli amministratori creano profili di elaborazione che possono chiamare il [!DNL Asset Compute Service] gruppo per passare le risorse per l’elaborazione. See [use asset microservices and processing profiles](https://docs.adobe.com/content/help/it-IT/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+>Al momento, [!DNL Asset Compute Service] è possibile utilizzare il modulo solo [!DNL Experience Manager] come Cloud Service. Gli amministratori creano profili di elaborazione che possono chiamare il [!DNL Asset Compute Service] gruppo per passare le risorse per l’elaborazione. See [use asset microservices and processing profiles](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 ## Casi di utilizzo supportati di [!DNL Asset Compute Service] {#possible-use-cases-benefits}
 
 [!DNL Asset Compute Service] supporta alcuni casi d&#39;uso commerciale comuni, come l&#39;elaborazione di immagini di base;  conversioni specifiche dell&#39;applicazione Adobe; e la creazione di applicazioni personalizzate che gestiscano i complessi requisiti aziendali.
 
-Potete utilizzare [!DNL Asset Compute] il servizio Web per generare miniature per tipi di file diversi, rappresentazioni di immagini di alta qualità per i formati [file](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html)supportati. Consultate [casi di utilizzo supportati tramite configurazione](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html#custom-config)personalizzata.
+Potete utilizzare [!DNL Asset Compute] il servizio Web per generare miniature per tipi di file diversi, rappresentazioni di immagini di alta qualità per i formati [file](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)supportati. Consultate [casi di utilizzo supportati tramite configurazione](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)personalizzata.
 
 >[!NOTE]
 >
@@ -45,10 +45,10 @@ Potete utilizzare [!DNL Asset Compute] il servizio Web per generare miniature pe
 
 >[!MORELIKETHIS]
 >
->* [Panoramica dell’elaborazione delle risorse con i microservizi delle risorse in Adobe Experience Manager come Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html).
+>* [Panoramica dell’elaborazione delle risorse con i microservizi delle risorse in Adobe Experience Manager come Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
 >* [Documentazione del progetto Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
->* [Formati di file supportati per l&#39;elaborazione](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html).
->* [Note sulla versione del servizio di calcolo risorse](release-notes.md)
+>* [Formati di file supportati per l&#39;elaborazione](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
+>* [Note sulla versione del servizio di Asset compute](release-notes.md)
 
 
 <!-- **TBD:**
