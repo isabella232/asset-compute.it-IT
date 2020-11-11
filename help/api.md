@@ -2,9 +2,9 @@
 title: '[!DNL Asset Compute Service] API HTTP.'
 description: '[!DNL Asset Compute Service] API HTTP per creare applicazioni personalizzate.'
 translation-type: tm+mt
-source-git-commit: 18e97e544014933e9910a12bc40246daa445bf4f
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
-source-wordcount: '2931'
+source-wordcount: '2925'
 ht-degree: 2%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # [!DNL Asset Compute Service] API HTTP {#asset-compute-http-api}
 
-L&#39;utilizzo dell&#39;API è limitato a scopi di sviluppo. L&#39;API viene fornita come contesto quando si sviluppano applicazioni personalizzate. [!DNL Adobe Experience Manager] come Cloud Service utilizza l&#39;API per trasmettere le informazioni di elaborazione a un&#39;applicazione personalizzata. Per ulteriori informazioni, consultate [Utilizzare i microservizi delle risorse e i profili](https://docs.adobe.com/content/help/it-IT/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)di elaborazione.
+L&#39;utilizzo dell&#39;API è limitato a scopi di sviluppo. L&#39;API viene fornita come contesto quando si sviluppano applicazioni personalizzate. [!DNL Adobe Experience Manager] come Cloud Service utilizza l&#39;API per trasmettere le informazioni di elaborazione a un&#39;applicazione personalizzata. Per ulteriori informazioni, consultate [Utilizzare i microservizi delle risorse e i profili](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)di elaborazione.
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ Ciò richiede la sottoscrizione del [!DNL Adobe Developer Console] progetto a `A
 * Base
    * scopes: `openid,AdobeID`
 
-* Calcolo risorsa
+* asset compute 
    * metascope: `asset_compute_meta`
    * scopes: `asset_compute,read_organizations`
 
@@ -349,7 +349,7 @@ Tutte le risposte JSON (se presenti) includono il valore `requestId` che corrisp
 
 ## Consenso alla post-elaborazione {#opt-in-to-post-processing}
 
-L’SDK [per il calcolo delle](https://github.com/adobe/asset-compute-sdk) risorse supporta una serie di opzioni di base per la post-elaborazione delle immagini. I lavoratori personalizzati possono scegliere esplicitamente di postelaborazione impostando il campo `postProcess` sull&#39;oggetto di rappresentazione su `true`.
+L’SDK [per Asset compute](https://github.com/adobe/asset-compute-sdk) supporta una serie di opzioni di base per la post-elaborazione delle immagini. I lavoratori personalizzati possono scegliere esplicitamente di postelaborazione impostando il campo `postProcess` sull&#39;oggetto di rappresentazione su `true`.
 
 I casi di utilizzo supportati sono:
 
@@ -362,7 +362,7 @@ I casi di utilizzo supportati sono:
 
 ## Risorse di filigrana {#add-watermark}
 
-L’SDK [per il calcolo delle](https://github.com/adobe/asset-compute-sdk) risorse supporta l’aggiunta di una filigrana ai file di immagine PNG, JPEG, TIFF e GIF. La filigrana viene aggiunta seguendo le istruzioni di rappresentazione nell&#39; `watermark` oggetto sulla rappresentazione.
+L’SDK [per](https://github.com/adobe/asset-compute-sdk) Asset compute supporta l’aggiunta di una filigrana ai file di immagine PNG, JPEG, TIFF e GIF. La filigrana viene aggiunta seguendo le istruzioni di rappresentazione nell&#39; `watermark` oggetto sulla rappresentazione.
 
 La filigrana viene applicata durante la fase di post-elaborazione del rendering. Per applicare una filigrana alle risorse, il lavoratore personalizzato [sceglie di eseguire la post-elaborazione](#opt-in-to-post-processing) impostando il campo `postProcess` sull&#39;oggetto di rappresentazione su `true`. Se il lavoratore non opta, la filigrana non viene applicata, anche se l&#39;oggetto filigrana è impostato sull&#39;oggetto di rappresentazione nella richiesta.
 
@@ -374,7 +374,7 @@ Queste sono le opzioni disponibili per l&#39; `renditions` array in [/process](#
 
 | Nome | Tipo | Descrizione | Esempio |
 |-------------------|----------|-------------|---------|
-| `fmt` | `string` | Il formato di destinazione delle rappresentazioni può essere anche `text` per l’estrazione del testo e `xmp` per l’estrazione dei metadati XMP come xml. Vedere [Formati supportati](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
+| `fmt` | `string` | Il formato di destinazione delle rappresentazioni può essere anche `text` per l’estrazione del testo e `xmp` per l’estrazione dei metadati XMP come xml. Vedere [Formati supportati](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
 | `worker` | `string` | URL di un&#39;applicazione [](develop-custom-application.md)personalizzata. Deve essere un `https://` URL. Se questo campo è presente, la rappresentazione viene creata da un&#39;applicazione personalizzata. Qualsiasi altro campo di rappresentazione impostato viene quindi utilizzato nell&#39;applicazione personalizzata. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | URL al quale la rappresentazione generata deve essere caricata tramite PUT HTTP. | `http://w.com/img.jpg` |
 | `target` | `object` | Informazioni sul caricamento di più URL pre-firmati per la rappresentazione generata. Questo è per il caricamento binario diretto [AEM/Oak](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) con questo comportamento [di caricamento](http://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html)multiparte.<br>espandibili:<ul><li>`urls`: array di stringhe, uno per ciascun URL parte pre-firmato</li><li>`minPartSize`: la dimensione minima da utilizzare per una parte = url</li><li>`maxPartSize`: la dimensione massima da utilizzare per una parte = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
@@ -382,7 +382,7 @@ Queste sono le opzioni disponibili per l&#39; `renditions` array in [/process](#
 
 ### Campi specifici per la rappresentazione {#rendition-specific-fields}
 
-Per un elenco dei formati di file attualmente supportati, vedere Formati [di file](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html)supportati.
+Per un elenco dei formati di file attualmente supportati, vedere Formati [di file](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)supportati.
 
 | Nome | Tipo | Descrizione | Esempio |
 |-------------------|----------|-------------|---------|
