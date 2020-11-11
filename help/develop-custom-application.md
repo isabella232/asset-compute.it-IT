@@ -2,9 +2,9 @@
 title: Sviluppare per [!DNL Asset Compute Service].
 description: Creazione di applicazioni personalizzate tramite [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 127895cf1bab59546f9ba0be2b3b7a935627effb
+source-git-commit: 6de4e3cde9c38f2e23838f5d728dae23e15d2147
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1559'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Assicurarsi che l&#39;interfaccia CLI [di I/O di](https://github.com/adobe/aio-c
 
    Leggi qui i componenti [principali di un&#39;app](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application)Firefly.
 
-   L’applicazione modello sfrutta l’SDK [per il calcolo delle](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) risorse per il caricamento, il download e l’orchestrazione di rappresentazioni dell’applicazione, pertanto gli sviluppatori devono solo implementare la logica dell’applicazione personalizzata. All’interno della `actions/<worker-name>` cartella, il `index.js` file è il punto in cui aggiungere il codice dell’applicazione personalizzato.
+   L’applicazione modello sfrutta l’SDK [per](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) Asset compute per il caricamento, il download e l’orchestrazione di rappresentazioni dell’applicazione, pertanto gli sviluppatori devono solo implementare la logica dell’applicazione personalizzata. All’interno della `actions/<worker-name>` cartella, il `index.js` file è il punto in cui aggiungere il codice dell’applicazione personalizzato.
 
 Per esempi e idee per applicazioni personalizzate, consultate [esempi di applicazioni](#try-sample) personalizzate.
 
@@ -82,7 +82,7 @@ Lo strumento di sviluppo utilizzato per testare applicazioni personalizzate con 
 
 >[!NOTE]
 >
->Questo è separato dall&#39;archiviazione cloud di [!DNL Adobe Experience Manager] come Cloud Service. Si applica solo allo sviluppo e al test con lo strumento di sviluppo Asset Compute.
+>Questo è separato dall&#39;archiviazione cloud di [!DNL Adobe Experience Manager] come Cloud Service. Si applica solo allo sviluppo e al test con lo strumento di sviluppo del Asset compute .
 
 Assicuratevi di avere accesso a un contenitore [di archiviazione cloud](https://github.com/adobe/asset-compute-devtool#prerequisites)supportato. Questo contenitore può essere condiviso da più sviluppatori in diversi progetti, a seconda delle necessità.
 
@@ -94,6 +94,12 @@ Aggiungete le seguenti credenziali per lo strumento di sviluppo al file ENV nell
 
    ```conf
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
+   ```
+
+1. Se il file `console.json` non si trova nella directory principale direttamente dell’app Firefly, aggiungi il percorso assoluto al file JSON di integrazione della console sviluppatore di Adobe . Si tratta dello stesso [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) file scaricato nell’area di lavoro del progetto. In alternativa, potete anche utilizzare il comando `aio app use <path_to_console_json>` invece di aggiungere il percorso al file ENV.
+
+   ```conf
+   ASSET_COMPUTE_INTEGRATION_FILE_PATH=
    ```
 
 1. Aggiungere le credenziali di archiviazione S3 o Azure. È necessario avere accesso a una sola soluzione di archiviazione cloud.
@@ -113,7 +119,7 @@ Aggiungete le seguenti credenziali per lo strumento di sviluppo al file ENV nell
 
 ## Esecuzione dell&#39;applicazione {#run-custom-application}
 
-Prima di eseguire l’applicazione con Asset Compute Developer Tool, configurate correttamente le [credenziali](#developer-tool-credentials).
+Prima di eseguire l&#39;applicazione con  Asset compute Developer Tool, configurate correttamente le [credenziali](#developer-tool-credentials).
 
 Per eseguire l&#39;applicazione nello strumento di sviluppo, utilizzare `aio app run` command. Consente di distribuire l&#39;azione ad Adobe I/O Runtime e avviare lo strumento di sviluppo sul computer locale. Questo strumento viene utilizzato per testare le richieste di applicazione durante lo sviluppo. Esempio di richiesta di rappresentazione:
 
@@ -128,7 +134,7 @@ Per eseguire l&#39;applicazione nello strumento di sviluppo, utilizzare `aio app
 
 >[!NOTE]
 >
->Non utilizzare il `--local` flag con il `run` comando. Non funziona con le applicazioni [!DNL Asset Compute] personalizzate e lo strumento Asset Compute Developer. Le applicazioni personalizzate vengono richiamate dall&#39;utente [!DNL Asset Compute Service] che non può accedere alle azioni eseguite sui computer locali dello sviluppatore.
+>Non utilizzare il `--local` flag con il `run` comando. Non funziona con le applicazioni [!DNL Asset Compute] personalizzate e lo strumento Sviluppatore di Asset compute . Le applicazioni personalizzate vengono richiamate dall&#39;utente [!DNL Asset Compute Service] che non può accedere alle azioni eseguite sui computer locali dello sviluppatore.
 
 Vedere [qui](test-custom-application.md) come eseguire il test e il debug dell&#39;applicazione. Al termine dello sviluppo dell&#39;applicazione personalizzata, [distribuite l&#39;applicazione](deploy-custom-application.md)personalizzata.
 
@@ -208,7 +214,7 @@ Il file `example-worker-animal-pictures` passa un parametro personalizzato [`ani
 
 ## Supporto per autenticazione e autorizzazione {#authentication-authorization-support}
 
-Per impostazione predefinita, le applicazioni personalizzate Asset Compute sono provviste di controlli di autorizzazione e autenticazione per le applicazioni Firefly. Questa opzione è attivata impostando l’ `require-adobe-auth` annotazione su `true` nella `manifest.yml`.
+Per impostazione predefinita,  applicazioni personalizzate di Asset compute vengono fornite le verifiche di autorizzazione e autenticazione per le applicazioni Firefly. Questa opzione è attivata impostando l’ `require-adobe-auth` annotazione su `true` nella `manifest.yml`.
 
 ### Accesso ad altre API  Adobe {#access-adobe-apis}
 
@@ -272,14 +278,14 @@ Un&#39;applicazione viene eseguita in un contenitore in Adobe I/O Runtime con [l
           concurrency: 1
 ```
 
-A causa dell&#39;elaborazione più ampia solitamente eseguita dalle applicazioni Asset Compute, è più probabile che si debbano regolare questi limiti per ottenere prestazioni ottimali (abbastanza grandi da gestire risorse binarie) ed efficienza (non spreco di risorse a causa di memoria contenitore inutilizzata).
+A causa dell&#39;elaborazione più ampia solitamente realizzata dalle applicazioni  Asset compute, è più probabile che si debbano regolare questi limiti per ottenere prestazioni ottimali (abbastanza grandi da gestire risorse binarie) ed efficienza (non spreco di risorse a causa di memoria contenitore inutilizzata).
 
 Il timeout predefinito per le azioni in Runtime è di un minuto, ma può essere aumentato impostando il `timeout` limite (in millisecondi). Se prevedete di elaborare file più grandi, aumentate questo tempo. Considerate il tempo totale necessario per scaricare l’origine, elaborare il file e caricare la rappresentazione. Se un&#39;azione si interrompe, ovvero non restituisce l&#39;attivazione prima del limite di timeout specificato, Runtime scarta il contenitore e non lo riutilizza.
 
-Le applicazioni di calcolo delle risorse tendono ad essere associate a un binding di I/O in rete e su disco. Il file di origine deve essere scaricato per primo, l&#39;elaborazione è spesso pesante in I/O e le rappresentazioni risultanti vengono caricate di nuovo.
+ applicazioni di Asset compute tendono ad essere collegate in rete e su disco IO. Il file di origine deve essere scaricato per primo, l&#39;elaborazione è spesso pesante in I/O e le rappresentazioni risultanti vengono caricate di nuovo.
 
 La memoria disponibile per un contenitore di azioni è specificata da `memorySize` in MB. Attualmente questo definisce anche l&#39;accesso della CPU al contenitore, e soprattutto è un elemento chiave del costo dell&#39;utilizzo di Runtime (contenitori più grandi costano di più). Utilizzate un valore più elevato quando l&#39;elaborazione richiede più memoria o CPU, ma prestate attenzione a non sprecare risorse poiché più grandi sono i contenitori, più bassa è la velocità effettiva complessiva.
 
-Inoltre, è possibile controllare la concorrenza dell&#39;azione all&#39;interno di un contenitore utilizzando l&#39; `concurrency` impostazione. Si tratta del numero di attivazioni simultanee ottenute da un singolo contenitore (della stessa azione). In questo modello, il contenitore di azioni è simile a un server Node.js che riceve più richieste simultanee, fino a tale limite. Se non è impostato, il valore predefinito in Runtime è 200, che è ottimo per le azioni Firefly più piccole, ma in genere troppo grande per le applicazioni Asset Compute, data la maggiore attività di elaborazione locale e disco. Alcune applicazioni, a seconda della loro implementazione, potrebbero anche non funzionare correttamente con l&#39;attività concorrente. L’SDK per elaborazione risorse garantisce che le attivazioni siano separate scrivendo file in diverse cartelle univoche.
+Inoltre, è possibile controllare la concorrenza dell&#39;azione all&#39;interno di un contenitore utilizzando l&#39; `concurrency` impostazione. Si tratta del numero di attivazioni simultanee ottenute da un singolo contenitore (della stessa azione). In questo modello, il contenitore di azioni è simile a un server Node.js che riceve più richieste simultanee, fino a tale limite. Se non è impostato, il valore predefinito in Runtime è 200, che è ottimo per le azioni Firefly più piccole, ma in genere troppo grande per le applicazioni di  Asset compute, data la maggiore attività di elaborazione locale e disco. Alcune applicazioni, a seconda della loro implementazione, potrebbero anche non funzionare correttamente con l&#39;attività concorrente. L’SDK per Asset compute  garantisce che le attivazioni siano separate scrivendo file in diverse cartelle univoche.
 
 Test delle applicazioni per trovare i numeri ottimali per `concurrency` e `memorySize`. Contenitori più grandi = limite di memoria più alto potrebbe consentire una maggiore concorrenza ma potrebbe anche essere utile per il traffico più basso.
