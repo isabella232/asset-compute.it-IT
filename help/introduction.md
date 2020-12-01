@@ -1,5 +1,5 @@
 ---
-title: Introduzione alla [!DNL Asset Compute Service].
+title: Introduzione a  [!DNL Asset Compute Service].
 description: '[!DNL Asset Compute Service] è un servizio di elaborazione delle risorse nativo del cloud che riduce la complessità e migliora la scalabilità.'
 translation-type: tm+mt
 source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
@@ -10,23 +10,23 @@ ht-degree: 0%
 ---
 
 
-# Panoramica [!DNL Asset Compute Service] {#overview}
+# Panoramica di [!DNL Asset Compute Service] {#overview}
 
-[!DNL Asset Compute Service] è un servizio scalabile ed estensibile di [!DNL Adobe Experience Cloud] elaborazione delle risorse digitali. Può trasformare immagini, video, documenti e altri formati di file in diverse rappresentazioni, come miniature, testo estratto e metadati, nonché archivi.
+[!DNL Asset Compute Service] è un servizio scalabile ed estensibile di  [!DNL Adobe Experience Cloud] elaborazione delle risorse digitali. Può trasformare immagini, video, documenti e altri formati di file in diverse rappresentazioni, come miniature, testo estratto e metadati, nonché archivi.
 
-Gli sviluppatori possono collegare applicazioni di risorse personalizzate (o &quot;lavoratori personalizzati&quot;) per risolvere casi di utilizzo personalizzati. Il servizio funziona in fase di [!DNL Adobe I/O] esecuzione. È estensibile tramite app [!DNL Project Firefly] headless scritte in Node.js. che possono eseguire operazioni personalizzate, ad esempio la chiamata di API esterne per eseguire operazioni sulle immagini o il [!DNL Adobe Sensei] supporto.
+Gli sviluppatori possono collegare applicazioni di risorse personalizzate (o &quot;lavoratori personalizzati&quot;) per risolvere casi di utilizzo personalizzati. Il servizio funziona nel runtime [!DNL Adobe I/O]. Può essere esteso tramite [!DNL Project Firefly] app headless scritte in Node.js. che possono eseguire operazioni personalizzate, ad esempio la chiamata di API esterne per eseguire operazioni sulle immagini o il supporto di [!DNL Adobe Sensei].
 
-[!DNL Project Firefly] è un framework per creare e distribuire applicazioni Web personalizzate in fase di [!DNL Adobe I/O] esecuzione per estendere le soluzioni Adobe Experience Cloud. Per creare applicazioni personalizzate, gli sviluppatori possono utilizzare [!DNL React Spectrum] ( toolkit dell&#39;interfaccia utente del Adobe), creare microservizi, creare eventi personalizzati e orchestrare API. Consulta [la documentazione di Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
+[!DNL Project Firefly] è un framework per creare e distribuire applicazioni Web personalizzate in  [!DNL Adobe I/O] fase di esecuzione per estendere le soluzioni Adobe Experience Cloud. Per creare applicazioni personalizzate, gli sviluppatori possono utilizzare [!DNL React Spectrum] ( toolkit dell&#39;interfaccia utente del Adobe), creare microservizi, creare eventi personalizzati e orchestrare API. Vedere la [documentazione del progetto Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
 
 >[!NOTE]
 >
->Al momento, [!DNL Asset Compute Service] è possibile utilizzare il modulo solo [!DNL Experience Manager] come Cloud Service. Gli amministratori creano profili di elaborazione che possono chiamare il [!DNL Asset Compute Service] gruppo per passare le risorse per l’elaborazione. See [use asset microservices and processing profiles](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+>Attualmente, il [!DNL Asset Compute Service] può essere utilizzato solo tramite [!DNL Experience Manager] come Cloud Service. Gli amministratori creano profili di elaborazione che possono chiamare [!DNL Asset Compute Service] per trasmettere le risorse per l&#39;elaborazione. Vedere [utilizzare i microservizi delle risorse e i profili di elaborazione](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 ## Casi di utilizzo supportati di [!DNL Asset Compute Service] {#possible-use-cases-benefits}
 
 [!DNL Asset Compute Service] supporta alcuni casi d&#39;uso commerciale comuni, come l&#39;elaborazione di immagini di base;  conversioni specifiche dell&#39;applicazione Adobe; e la creazione di applicazioni personalizzate che gestiscano i complessi requisiti aziendali.
 
-Potete utilizzare [!DNL Asset Compute] il servizio Web per generare miniature per tipi di file diversi, rappresentazioni di immagini di alta qualità per i formati [file](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)supportati. Consultate [casi di utilizzo supportati tramite configurazione](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)personalizzata.
+È possibile utilizzare il servizio Web [!DNL Asset Compute] per generare miniature per diversi tipi di file, rappresentazioni di alta qualità delle immagini per i formati di file [supportati](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html). Vedere [casi di utilizzo supportati tramite configurazione personalizzata](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ Potete utilizzare [!DNL Asset Compute] il servizio Web per generare miniature pe
 >* [Panoramica dell’elaborazione delle risorse con i microservizi delle risorse in Adobe Experience Manager come Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
 >* [Documentazione del progetto Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
 >* [Formati di file supportati per l&#39;elaborazione](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
->* [Note sulla versione del servizio di Asset compute](release-notes.md)
+>* [Note sulla versione del servizio di Asset compute ](release-notes.md)
 
 
 <!-- **TBD:**
