@@ -2,9 +2,9 @@
 title: Architettura di [!DNL Asset Compute Service].
 description: Come  [!DNL Asset Compute Service] API, applicazioni e SDK funzionano insieme per fornire un servizio di elaborazione delle risorse nativo per il cloud.
 translation-type: tm+mt
-source-git-commit: 0fb256f7d9f83fbae564d9fd52ee6b2f34c5d7e9
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Architettura di [!DNL Asset Compute Service] {#overview}
 
-[!DNL Asset Compute Service] è basato sulla piattaforma Adobe I/O Runtime senza server. Fornisce  supporto dei servizi di contenuto Adobe Sensei per le risorse. Il client di chiamata (solo [!DNL Experience Manager] come Cloud Service è supportato) viene fornito con le  informazioni generate da Adobe Sensei richieste per la risorsa. Le informazioni restituite sono in formato JSON.
+[!DNL Asset Compute Service] è basato sulla piattaforma Adobe I/O Runtime senza server. Fornisce  supporto dei servizi di contenuto Adobe Sensei per le risorse. Il client di chiamata (solo [!DNL Experience Manager] come [!DNL Cloud Service] è supportato) viene fornito con le  informazioni generate da Adobe Sensei richieste per la risorsa. Le informazioni restituite sono in formato JSON.
 
 [!DNL Asset Compute Service] può essere esteso mediante la creazione di applicazioni personalizzate basate su  [!DNL Project Firefly]. Queste applicazioni personalizzate sono [!DNL Project Firefly] app headless e eseguono attività quali l&#39;aggiunta di strumenti di conversione personalizzati o la chiamata di API esterne per eseguire operazioni sulle immagini.
 
