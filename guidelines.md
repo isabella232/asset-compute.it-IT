@@ -1,8 +1,8 @@
 ---
-source-git-commit: 0a0feacbcd6456e01a6d451f9954ab21c1a8bce3
+source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '646'
 ht-degree: 5%
 
 ---
@@ -30,9 +30,9 @@ Eccezioni a questa regola sono le note sulla versione in cui i problemi noti pos
 
 ### I contributi alla documentazione non devono rispondere alle domande dei clienti
 
-Ogni idea che si potrebbe dover migliorare la documentazione è gradita come contributo. Tuttavia, commenti, problemi e richieste pull sono destinati solo ai *contributi* . Non sono destinati a rispondere alle tue domande su come utilizzare il prodotto, implementare progetti o risolvere problemi tecnici.
+Ogni idea che si potrebbe dover migliorare la documentazione è gradita come contributo. Tuttavia, commenti, problemi e richieste pull sono destinati solo a *contributi*. Non sono destinati a rispondere alle tue domande su come utilizzare il prodotto, implementare progetti o risolvere problemi tecnici.
 
-Eventuali domande sull’utilizzo o eventuali errori tecnici devono essere segnalate tramite il normale processo di assistenza tramite il portale [di assistenza Enterprise](https://helpx.adobe.com/it/contact/enterprise-support.ec.html) Experience Cloud o discusse nella community [di](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)Experience Manager.
+Eventuali domande relative all&#39;utilizzo o agli errori tecnici che potrebbero verificarsi devono essere segnalate attraverso il normale processo di supporto tramite il [[!DNL Experience Cloud] portale di assistenza Enterprise](https://helpx.adobe.com/it/contact/enterprise-support.ec.html) o discusse nella [[!DNL Experience Manager] community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
 I contributi alla documentazione non sostituiscono l&#39;Assistenza clienti di  Adobe*** e tutti i contributi richiesti per ottenere risposte alle domande relative al supporto verranno rifiutati.
 
@@ -60,7 +60,7 @@ Ricordate, i lettori della documentazione sono in tutto il mondo e non ci si pu�
 
 #### Segui il manuale di stile di Microsoft
 
-[Il Manuale di Stile](https://docs.microsoft.com/en-us/style-guide/welcome/) Microsoft è una guida di stile della documentazione disponibile gratuitamente che si concentra sulla documentazione del software.
+[Il Manuale di ](https://docs.microsoft.com/en-us/style-guide/welcome/) Styleis Microsoft è una guida di stile della documentazione disponibile liberamente che si concentra sulla documentazione del software.
 
 ### Formattazione
 
