@@ -2,9 +2,9 @@
 title: '[!DNL Asset Compute Service] API HTTP.'
 description: '[!DNL Asset Compute Service] API HTTP per creare applicazioni personalizzate.'
 translation-type: tm+mt
-source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '2925'
+source-wordcount: '2921'
 ht-degree: 2%
 
 ---
@@ -12,11 +12,11 @@ ht-degree: 2%
 
 # [!DNL Asset Compute Service] API HTTP  {#asset-compute-http-api}
 
-L&#39;utilizzo dell&#39;API è limitato a scopi di sviluppo. L&#39;API viene fornita come contesto quando si sviluppano applicazioni personalizzate. [!DNL Adobe Experience Manager] come Cloud Service utilizza l&#39;API per trasmettere le informazioni di elaborazione a un&#39;applicazione personalizzata. Per ulteriori informazioni, vedere [Utilizzare i microservizi delle risorse e i profili di elaborazione](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+L&#39;utilizzo dell&#39;API è limitato a scopi di sviluppo. L&#39;API viene fornita come contesto quando si sviluppano applicazioni personalizzate. [!DNL Adobe Experience Manager] come  [!DNL Cloud Service] utilizza l&#39;API per trasmettere le informazioni di elaborazione a un&#39;applicazione personalizzata. Per ulteriori informazioni, vedere [Utilizzare i microservizi delle risorse e i profili di elaborazione](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
->[!DNL Asset Compute Service] è disponibile solo per l&#39;uso con  [!DNL Experience Manager] come Cloud Service.
+>[!DNL Asset Compute Service] è disponibile solo per l&#39;uso con  [!DNL Experience Manager] come  [!DNL Cloud Service].
 
 Qualsiasi client dell&#39;API HTTP [!DNL Asset Compute Service] deve seguire questo flusso di alto livello:
 
