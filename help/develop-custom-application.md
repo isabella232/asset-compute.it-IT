@@ -2,9 +2,9 @@
 title: Sviluppare per  [!DNL Asset Compute Service].
 description: Create applicazioni personalizzate utilizzando [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
+source-git-commit: 576936cc7527fc4cb43c0859a61df5fecc0bc3a8
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1569'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Assicurarsi che la [ Adobe I/O CLI](https://github.com/adobe/aio-cli) sia instal
    create console.json
    ```
 
-1. Quando viene richiesto `Which Adobe I/O App features do you want to enable for this project?`, selezionare almeno `Actions`:
+1. Quando viene richiesto `Which Adobe I/O App features do you want to enable for this project?`, selezionare `Actions`. Accertatevi di deselezionare l&#39;opzione `Web Assets` quando le risorse Web utilizzano controlli di autenticazione e autorizzazione diversi.
 
    ```bash
    ? Which Adobe I/O App features do you want to enable for this project?
