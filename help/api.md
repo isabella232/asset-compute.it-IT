@@ -2,9 +2,9 @@
 title: '[!DNL Asset Compute Service] API HTTP.'
 description: '[!DNL Asset Compute Service] API HTTP per creare applicazioni personalizzate.'
 translation-type: tm+mt
-source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '2921'
+source-wordcount: '2906'
 ht-degree: 2%
 
 ---
@@ -68,11 +68,11 @@ Questi requisiti richiedono la sottoscrizione del progetto [!DNL Adobe Developer
    * metascope: `asset_compute_meta`
    * ambiti: `asset_compute,read_organizations`
 
-*  Adobe I/O Events
+* [!DNL Adobe I/O] Eventi
    * metascope: `event_receiver_api`
    * ambiti: `event_receiver,event_receiver_api`
 
-*  Adobe I/O Management API
+* [!DNL Adobe I/O] API di gestione
    * metascope: `ent_adobeio_sdk`
    * ambiti: `adobeio_api,additional_info.roles,additional_info.projectedProductContext`
 
@@ -412,9 +412,9 @@ Il formato PNG viene utilizzato come filigrana.
 
 ## Eventi asincroni {#asynchronous-events}
 
-Al termine dell&#39;elaborazione di una rappresentazione o al verificarsi di un errore, un evento viene inviato a un [ Adobe I/O Events Journal](https://www.adobe.io/apis/experienceplatform/events/documentation.html#!adobedocs/adobeio-events/master/intro/journaling_api.md). I client devono ascoltare l&#39;URL del journal fornito tramite [/register](#register). La risposta del journal include un array `event` composto da un oggetto per ogni evento, di cui il campo `event` include il payload dell&#39;evento effettivo.
+Una volta terminata l&#39;elaborazione di una rappresentazione o quando si verifica un errore, un evento viene inviato a un [[!DNL Adobe I/O] Giornale eventi](https://www.adobe.io/apis/experienceplatform/events/documentation.html#!adobedocs/adobeio-events/master/intro/journaling_api.md). I client devono ascoltare l&#39;URL del journal fornito tramite [/register](#register). La risposta del journal include un array `event` composto da un oggetto per ogni evento, di cui il campo `event` include il payload dell&#39;evento effettivo.
 
-Il tipo di evento Adobe I/O  per tutti gli eventi del [!DNL Asset Compute Service] è `asset_compute`. Il giornale di registrazione viene sottoscritto automaticamente solo per questo tipo di evento e non è più necessario filtrare in base al tipo di evento Adobe I/O . I tipi di evento specifici del servizio sono disponibili nella proprietà `type` dell&#39;evento.
+Il tipo di evento [!DNL Adobe I/O] per tutti gli eventi del [!DNL Asset Compute Service] è `asset_compute`. Il giornale di registrazione viene sottoscritto automaticamente solo per questo tipo di evento e non è più necessario filtrare in base al tipo di evento [!DNL Adobe I/O]. I tipi di evento specifici del servizio sono disponibili nella proprietà `type` dell&#39;evento.
 
 ### Tipi di evento {#event-types}
 
