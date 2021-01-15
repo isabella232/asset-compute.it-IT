@@ -2,9 +2,9 @@
 title: Sviluppare per  [!DNL Asset Compute Service].
 description: Create applicazioni personalizzate utilizzando [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
@@ -282,7 +282,7 @@ A causa dell&#39;elaborazione più ampia solitamente realizzata dalle applicazio
 
 Il timeout predefinito per le azioni in Runtime è di un minuto, ma può essere aumentato impostando il limite `timeout` (in millisecondi). Se prevedete di elaborare file più grandi, aumentate questo tempo. Considerate il tempo totale necessario per scaricare l’origine, elaborare il file e caricare la rappresentazione. Se un&#39;azione si interrompe, ovvero non restituisce l&#39;attivazione prima del limite di timeout specificato, Runtime scarta il contenitore e non lo riutilizza.
 
- applicazioni di Asset compute tendono ad essere collegate in rete e su disco IO. Il file di origine deve essere scaricato per primo, l&#39;elaborazione è spesso pesante in I/O e le rappresentazioni risultanti vengono caricate di nuovo.
+ applicazioni di Asset compute tendono ad essere collegate in rete e su disco. Il file di origine deve essere scaricato per primo, l&#39;elaborazione richiede spesso molte risorse e quindi le rappresentazioni risultanti vengono caricate di nuovo.
 
 La memoria disponibile per un contenitore di azioni è specificata da `memorySize` in MB. Attualmente questo definisce anche l&#39;accesso della CPU al contenitore, e soprattutto è un elemento chiave del costo dell&#39;utilizzo di Runtime (contenitori più grandi costano di più). Utilizzate un valore più elevato quando l&#39;elaborazione richiede più memoria o CPU, ma prestate attenzione a non sprecare risorse poiché più grandi sono i contenitori, più bassa è la velocità effettiva complessiva.
 
