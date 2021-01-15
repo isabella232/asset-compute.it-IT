@@ -2,9 +2,9 @@
 title: Risoluzione dei problemi [!DNL Asset Compute Service].
 description: Risoluzione dei problemi e debug di applicazioni personalizzate utilizzando [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '288'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Alcuni suggerimenti generici per la risoluzione dei problemi che possono essere 
 * Assicurati che eventuali errori derivanti dalla pulizia in caso di errore non generino errori personalizzati che nascondano il problema originale.
 
 * Quando si avvia lo strumento di sviluppo per la prima volta con una nuova [!DNL Asset Compute Service] integrazione, la prima richiesta di elaborazione potrebbe non riuscire, perché il giornale di registrazione eventi Asset compute  potrebbe non essere completamente configurato. Attendi che il journal venga configurato prima di inviare un&#39;altra richiesta.
-* Se si verificano degli errori durante l&#39;invio  richieste di Asset compute `/register` o `/process`, assicurarsi che tutte le API necessarie siano aggiunte al progetto e all&#39;area di lavoro [!DNL Adobe I/O], ovvero,  Asset compute, Eventi IO, Gestione eventi IO e Runtime.
+* Se si verificano degli errori durante l&#39;invio  richieste di Asset compute `/register` o `/process`, assicurarsi che tutte le API necessarie siano aggiunte al [!DNL Adobe I/O] Project and Workspace, ovvero,  Asset compute, [!DNL Adobe I/O] Events, [!DNL Adobe I/O] Events Management e [!DNL Adobe I/O] Runtime.
 
 ## Problemi di accesso tramite [!DNL Adobe I/O] CLI {#login-via-aio-cli}
 
