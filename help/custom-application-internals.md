@@ -2,9 +2,9 @@
 title: Comprendere il funzionamento di un'applicazione personalizzata.
 description: Uso interno dell'applicazione personalizzata  [!DNL Asset Compute Service] per capire come funziona.
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Utilizzate l&#39;illustrazione seguente per comprendere il flusso di lavoro end-
 
 ## Registrazione {#registration}
 
-Il client deve chiamare [`/register`](api.md#register) una volta prima della prima richiesta a [`/process`](api.md#process-request) per impostare e recuperare l&#39;URL del giornale di registrazione per la ricezione  eventi Adobe I/O per  Adobe  Asset compute.
+Il client deve chiamare [`/register`](api.md#register) una volta prima della prima richiesta a [`/process`](api.md#process-request) per impostare e recuperare l&#39;URL del giornale di registrazione per la ricezione di eventi [!DNL Adobe I/O] per  Adobe  Asset compute.
 
 ```sh
 curl -X POST \
@@ -49,7 +49,7 @@ curl -X POST \
 
 Il client è responsabile della corretta formattazione delle rappresentazioni con URL pre-firmati. La [`@adobe/node-cloud-blobstore-wrapper`](https://github.com/adobe/node-cloud-blobstore-wrapper#presigned-urls) libreria JavaScript può essere utilizzata nelle applicazioni NodeJS per pre-firmare gli URL. Attualmente la libreria supporta solo Azure Blob Storage e AWS S3 Containers.
 
-La richiesta di elaborazione restituisce un `requestId` che può essere utilizzato per il polling  Adobe I/O Events.
+La richiesta di elaborazione restituisce un `requestId` che può essere utilizzato per il polling di eventi [!DNL Adobe I/O].
 
 Segue un esempio di richiesta di elaborazione personalizzata dell&#39;applicazione.
 
@@ -71,7 +71,7 @@ Segue un esempio di richiesta di elaborazione personalizzata dell&#39;applicazio
 
 [!DNL Asset Compute Service] invia le richieste di rappresentazione dell&#39;applicazione personalizzata all&#39;applicazione personalizzata. Utilizza un POST HTTP per l’URL dell’applicazione fornito, ovvero l’URL dell’azione Web protetta da Project Firefly. Tutte le richieste utilizzano il protocollo HTTPS per massimizzare la sicurezza dei dati.
 
-L&#39;SDK [ Asset compute](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) utilizzato da un&#39;applicazione personalizzata gestisce la richiesta di POST HTTP. Gestisce inoltre il download dell’origine, il caricamento di rappresentazioni, l’invio di eventi I/O e la gestione degli errori.
+L&#39;SDK [ Asset compute](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) utilizzato da un&#39;applicazione personalizzata gestisce la richiesta di POST HTTP. Gestisce inoltre il download dell&#39;origine, il caricamento di rappresentazioni, l&#39;invio di eventi [!DNL Adobe I/O] e la gestione degli errori.
 
 <!-- TBD: Add the application diagram. -->
 
@@ -115,13 +115,13 @@ Dopo che ciascuna rappresentazione è stata creata e memorizzata in un file con 
 
 Il `batchWorker()` ha un comportamento diverso, in quanto elabora effettivamente tutte le rappresentazioni e solo dopo che sono state elaborate, le carica.
 
-##  eventi Adobe I/O {#aio-events}
+## [!DNL Adobe I/O] Eventi {#aio-events}
 
-L’SDK invia  eventi Adobe I/O per ciascuna rappresentazione. Questi eventi possono essere di tipo `rendition_created` o `rendition_failed` a seconda del risultato. Per i dettagli sugli eventi, vedere [ eventi asincroni di Asset compute](api.md#asynchronous-events).
+L&#39;SDK invia [!DNL Adobe I/O] eventi per ogni rappresentazione. Questi eventi possono essere di tipo `rendition_created` o `rendition_failed` a seconda del risultato. Per i dettagli sugli eventi, vedere [ eventi asincroni di Asset compute](api.md#asynchronous-events).
 
-## Ricevi  eventi Adobe I/O {#receive-aio-events}
+## Ricevi eventi [!DNL Adobe I/O] {#receive-aio-events}
 
-Il client esegue il polling di [ Adobe I/O Events Journal](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) in base alla logica di consumo. L&#39;URL del journal iniziale è quello fornito nella risposta API `/register`. Gli eventi possono essere identificati utilizzando il simbolo `requestId` presente negli eventi ed è uguale a quello restituito in `/process`. Ogni rappresentazione dispone di un evento separato che viene inviato non appena la rappresentazione è stata caricata (o non è riuscita). Una volta ricevuto un evento corrispondente, il client può visualizzare o gestire in altro modo le rappresentazioni risultanti.
+Il client esegue il polling di [[!DNL Adobe I/O] Events Journal](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) in base alla logica di consumo. L&#39;URL del journal iniziale è quello fornito nella risposta API `/register`. Gli eventi possono essere identificati utilizzando il simbolo `requestId` presente negli eventi ed è uguale a quello restituito in `/process`. Ogni rappresentazione dispone di un evento separato che viene inviato non appena la rappresentazione è stata caricata (o non è riuscita). Una volta ricevuto un evento corrispondente, il client può visualizzare o gestire in altro modo le rappresentazioni risultanti.
 
 La libreria JavaScript [`asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) semplifica il polling delle scritture contabili mediante il metodo `waitActivation()` per ottenere tutti gli eventi.
 
@@ -141,7 +141,7 @@ await Promise.all(events.map(event => {
 }));
 ```
 
-Per informazioni dettagliate su come ottenere gli eventi del journal, vedere [ Adobe I/O Events API](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml).
+Per informazioni dettagliate su come ottenere gli eventi del journal, vedere [[!DNL Adobe I/O] Eventi API](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml).
 
 <!-- TBD:
 * Illustration of the controls/data flow.
