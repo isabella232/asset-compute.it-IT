@@ -2,9 +2,9 @@
 title: Test e debug dell'applicazione personalizzata [!DNL Asset Compute Service] .
 description: Test e debug dell'applicazione personalizzata [!DNL Asset Compute Service] .
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Il framework di test dell&#39;unità applicativa  Asset compute consente di test
 
 ### Aggiungi test {#add-tests}
 
-Sono previsti test all&#39;interno della cartella `test` al livello principale del progetto AIO. I casi di prova per ciascuna applicazione devono trovarsi nel percorso `test/asset-compute/<worker-name>`, con una cartella per ogni caso di test:
+Sono previsti test all&#39;interno della cartella `test` al livello principale del progetto [!DNL Adobe I/O]. I casi di prova per ciascuna applicazione devono trovarsi nel percorso `test/asset-compute/<worker-name>`, con una cartella per ogni caso di test:
 
 ```yaml
 action/
@@ -63,7 +63,7 @@ test/
             mock-console.adobe.io.json
 ```
 
-Per alcuni esempi, vedere l&#39;esempio di applicazioni personalizzate[. ](https://github.com/adobe/asset-compute-example-workers/) Di seguito è riportato un riferimento dettagliato.
+Per alcuni esempi, vedere l&#39;esempio di applicazioni personalizzate](https://github.com/adobe/asset-compute-example-workers/). [ Di seguito è riportato un riferimento dettagliato.
 
 ### Uscita test {#test-output}
 
