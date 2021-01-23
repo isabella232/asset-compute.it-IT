@@ -1,8 +1,8 @@
 ---
-title: Comprendere il funzionamento di un'applicazione personalizzata.
+title: Comprendere il funzionamento di un'applicazione personalizzata
 description: Uso interno dell'applicazione personalizzata  [!DNL Asset Compute Service] per capire come funziona.
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '751'
 ht-degree: 0%
