@@ -1,8 +1,8 @@
 ---
-title: Note sulla versione di  [!DNL Asset Compute Service].
+title: Note sulla versione di  [!DNL Asset Compute Service]
 description: Nuove funzioni, miglioramenti e problemi noti in [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: c57867cd896e4ccb9402e6eeb0eea133faaa0e5d
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
