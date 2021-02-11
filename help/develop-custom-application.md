@@ -2,9 +2,9 @@
 title: Sviluppare per  [!DNL Asset Compute Service]
 description: Create applicazioni personalizzate utilizzando [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+source-git-commit: 33b72b164faeda2dd425656209790f019ccec96e
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -96,11 +96,14 @@ Aggiungete le seguenti credenziali per lo strumento di sviluppo al file ENV nell
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
    ```
 
-1. Se `console.json` non si trova nella directory principale direttamente dell&#39;app Firefly, aggiungete il percorso assoluto al file JSON di integrazione  Adobe Developer Console. Si tratta dello stesso file [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) scaricato nell&#39;area di lavoro del progetto. In alternativa, potete anche utilizzare il comando `aio app use <path_to_console_json>` invece di aggiungere il percorso al file ENV.
+1. Scaricate il file dalla  Adobe Developer Console. Andate alla radice del progetto e fate clic su &quot;Scarica tutto&quot; nell&#39;angolo superiore destro. Il file viene scaricato con `<namespace>-<workspace>.json` come nome file. Effettua una delle operazioni seguenti:
 
-   ```conf
-   ASSET_COMPUTE_INTEGRATION_FILE_PATH=
-   ```
+   * Rinominare il file come `config.json` e spostarlo nella directory principale del progetto.
+   * Facoltativamente, puoi aggiungere il percorso assoluto del file JSON di integrazione della Console Sviluppatore  Adobe. Si tratta dello stesso file [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) scaricato nell&#39;area di lavoro del progetto.
+
+      ```conf
+      ASSET_COMPUTE_INTEGRATION_FILE_PATH=
+      ```
 
 1. Aggiungere le credenziali di archiviazione S3 o Azure. È necessario avere accesso a una sola soluzione di archiviazione cloud.
 
@@ -116,6 +119,10 @@ Aggiungete le seguenti credenziali per lo strumento di sviluppo al file ENV nell
    AZURE_STORAGE_KEY=
    AZURE_STORAGE_CONTAINER_NAME=
    ```
+
+>[!TIP]
+>
+>Il file `config.json` contiene le credenziali. Dall&#39;interno del progetto, aggiungete il file JSON al file `.gitignore` per impedirne la condivisione. Lo stesso vale per i file .env e .aio.
 
 ## Eseguire l&#39;applicazione {#run-custom-application}
 
