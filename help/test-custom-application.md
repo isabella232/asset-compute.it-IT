@@ -2,10 +2,9 @@
 title: Test e debug dell'applicazione personalizzata [!DNL Asset Compute Service] applicazione personalizzata
 description: Test e debug dell'applicazione personalizzata [!DNL Asset Compute Service] .
 exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
-translation-type: tm+mt
-source-git-commit: 9bc1534671c81a05798f98ae556d348bc771d975
+source-git-commit: ebc0d717b3f6fc4518f4a79cd44ebe8fdcf9ec6a
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -137,6 +136,10 @@ tests/
 ### Test degli errori previsti {#test-unexpected-errors}
 
 I casi di test di errore non devono contenere un file `rendition.*` previsto e devono definire il `errorReason` previsto all&#39;interno del file `params.json`.
+
+>[!NOTE]
+>
+>Se un test case non contiene un file previsto `rendition.*` e non definisce il `errorReason` previsto all&#39;interno del file `params.json`, si presume che si tratti di un errore con qualsiasi `errorReason`.
 
 Struttura del caso di test di errore:
 
