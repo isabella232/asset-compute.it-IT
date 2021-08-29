@@ -1,35 +1,34 @@
 ---
 title: Risoluzione dei problemi [!DNL Asset Compute Service]
-description: Risoluzione dei problemi e debug di applicazioni personalizzate utilizzando [!DNL Asset Compute Service].
-translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+description: Risolvere i problemi e eseguire il debug delle applicazioni personalizzate utilizzando [!DNL Asset Compute Service].
+exl-id: 017fff91-e5e9-4a30-babf-5faa1ebefc2f
+source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '285'
 ht-degree: 1%
 
 ---
 
-
 # Risoluzione dei problemi {#troubleshoot}
 
-Alcuni suggerimenti generici per la risoluzione dei problemi che possono essere utili per la risoluzione dei problemi con  servizio Asset compute sono:
+Alcuni suggerimenti generici per la risoluzione dei problemi che possono essere utili per la risoluzione dei problemi con Asset compute Service sono:
 
-* Verificare che l&#39;applicazione JavaScript non si arresti in modo anomalo all&#39;avvio. Tali arresti anomali sono in genere correlati a una libreria mancante o a una dipendenza.
-* Assicurarsi che tutti i riferimenti alle dipendenze da installare siano presenti nel file `package.json` dell&#39;applicazione.
-* Assicurati che eventuali errori derivanti dalla pulizia in caso di errore non generino errori personalizzati che nascondano il problema originale.
+* Assicurati che l&#39;applicazione JavaScript non si arresti all&#39;avvio. Tali arresti anomali sono solitamente correlati a una libreria mancante o a una dipendenza.
+* Assicurati che nel file `package.json` dell&#39;applicazione siano presenti riferimenti a tutte le dipendenze da installare.
+* Assicurati che eventuali errori derivanti dalla pulizia in caso di errore non generino errori propri che nascondono il problema originale.
 
-* Quando si avvia lo strumento di sviluppo per la prima volta con una nuova [!DNL Asset Compute Service] integrazione, la prima richiesta di elaborazione potrebbe non riuscire, perché il giornale di registrazione eventi Asset compute  potrebbe non essere completamente configurato. Attendi che il journal venga configurato prima di inviare un&#39;altra richiesta.
-* Se si verificano degli errori durante l&#39;invio  richieste di Asset compute `/register` o `/process`, assicurarsi che tutte le API necessarie siano aggiunte al [!DNL Adobe I/O] Project and Workspace, ovvero,  Asset compute, [!DNL Adobe I/O] Events, [!DNL Adobe I/O] Events Management e [!DNL Adobe I/O] Runtime.
+* Quando si avvia lo strumento per sviluppatori per la prima volta con una nuova integrazione [!DNL Asset Compute Service], la prima richiesta di elaborazione potrebbe non riuscire se Asset compute Events Journal non è completamente configurato. Attendi l&#39;impostazione del journal prima di inviare un&#39;altra richiesta.
+* Se si verificano degli errori durante l’invio di richieste di Asset compute `/register` o `/process`, assicurati che tutte le API necessarie siano aggiunte al progetto [!DNL Adobe I/O] e all’area di lavoro, ovvero, Asset compute, [!DNL Adobe I/O] Eventi, [!DNL Adobe I/O] Gestione eventi e [!DNL Adobe I/O] Runtime.
 
 ## Problemi di accesso tramite [!DNL Adobe I/O] CLI {#login-via-aio-cli}
 
-In caso di problemi durante l&#39;accesso a [!DNL Adobe Developer Console] [mediante la  [!DNL Adobe I/O] CLI](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli), aggiungere manualmente le credenziali necessarie per lo sviluppo, il test e la distribuzione dell&#39;applicazione personalizzata:
+In caso di problemi durante l&#39;accesso a [!DNL Adobe Developer Console] [tramite [!DNL Adobe I/O] CLI](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli), aggiungi manualmente le credenziali necessarie per lo sviluppo, il test e la distribuzione dell&#39;applicazione personalizzata:
 
-1. Andate al progetto e all&#39;area di lavoro Firefly nella [ Adobe Developer Console](https://console.adobe.io/) e premete **[!UICONTROL Download]** dall&#39;angolo in alto a destra. Apri questo file e salva il JSON in un luogo sicuro sul tuo computer.
+1. Passa al progetto Firefly e all&#39;area di lavoro in [Adobe Developer Console](https://console.adobe.io/) e premi **[!UICONTROL Download]** dall&#39;angolo in alto a destra. Apri questo file e salva questo JSON in un punto sicuro sul tuo computer.
 
-1. Individuate il file ENV nell’applicazione Firefly.
+1. Passa al file ENV nella tua applicazione Firefly.
 
-1. Aggiungete le credenziali runtime [!DNL Adobe I/O]. Ottenete le credenziali [!DNL Adobe I/O] A Runtime dal JSON scaricato. Le credenziali sono inferiori a `project.workspace.services.runtime`. Aggiungete le credenziali [!DNL Adobe I/O] Runtime nelle variabili `AIO_runtime_XXX`:
+1. Aggiungi le credenziali [!DNL Adobe I/O] Runtime. Ottieni le credenziali [!DNL Adobe I/O] A Runtime dal JSON scaricato. Le credenziali si trovano sotto `project.workspace.services.runtime`. Aggiungi le credenziali [!DNL Adobe I/O] Runtime nelle variabili `AIO_runtime_XXX` :
 
    ```json
    AIO_runtime_auth=
@@ -42,7 +41,7 @@ In caso di problemi durante l&#39;accesso a [!DNL Adobe Developer Console] [medi
        ASSET_COMPUTE_INTEGRATION_FILE_PATH=
    ```
 
-1. Configurate il resto delle [credenziali ](develop-custom-application.md) necessarie per lo strumento di sviluppo.
+1. Imposta il resto delle [credenziali richieste](develop-custom-application.md) necessarie per lo strumento sviluppatore.
 
 <!-- TBD for later:
 Add any best practices for developers in this section:

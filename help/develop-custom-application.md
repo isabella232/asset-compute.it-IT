@@ -1,16 +1,15 @@
 ---
 title: Sviluppa per [!DNL Asset Compute Service]
 description: Crea applicazioni personalizzate utilizzando [!DNL Asset Compute Service].
-translation-type: tm+mt
-source-git-commit: 7ae47fdb7ff91e1388d2037d90abe35fe5218216
+exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
+source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1605'
 ht-degree: 0%
 
 ---
 
-
-# Sviluppa un&#39;applicazione personalizzata {#develop}
+# Sviluppare un’applicazione personalizzata {#develop}
 
 Prima di iniziare a sviluppare un’applicazione personalizzata:
 
@@ -18,15 +17,15 @@ Prima di iniziare a sviluppare un’applicazione personalizzata:
 * Installare gli [strumenti software richiesti](/help/setup-environment.md#create-dev-environment).
 * Consulta [configurare l&#39;ambiente](setup-environment.md) per essere sicuri di essere pronti per creare un&#39;applicazione personalizzata.
 
-## Creare un&#39;applicazione personalizzata {#create-custom-application}
+## Creare un’applicazione personalizzata {#create-custom-application}
 
 Assicurati di aver installato [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) localmente.
 
-1. Per creare un&#39;applicazione personalizzata, [crea un&#39;app Firefly](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#4-bootstrapping-new-app-using-the-cli). A questo scopo, esegui `aio app init <app-name>` nel terminale.
+1. Per creare un&#39;applicazione personalizzata, [crea un&#39;app Firefly](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). A questo scopo, esegui `aio app init <app-name>` nel terminale.
 
-   Se non hai già effettuato l’accesso, questo comando richiede a un browser di accedere alla [Console per sviluppatori di Adobe](https://console.adobe.io/) con il tuo Adobe ID. Per ulteriori informazioni sull&#39;accesso dal client, consulta [qui](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli) .
+   Se non hai già effettuato l’accesso, questo comando richiede a un browser di accedere alla [Console per sviluppatori di Adobe](https://console.adobe.io/) con il tuo Adobe ID. Per ulteriori informazioni sull&#39;accesso dal client, consulta [qui](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli) .
 
-   Adobe consiglia di effettuare l&#39;accesso. In caso di problemi, segui le istruzioni [per creare un&#39;app senza effettuare l&#39;accesso](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   Adobe consiglia di effettuare l&#39;accesso. In caso di problemi, segui le istruzioni [per creare un&#39;app senza effettuare l&#39;accesso](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
 1. Dopo aver effettuato l’accesso, segui le istruzioni contenute in CLI e seleziona `Organization`, `Project` e `Workspace` da utilizzare per l’applicazione. Scegli il progetto e l&#39;area di lavoro creati quando [imposti l&#39;ambiente](setup-environment.md).
 
@@ -61,7 +60,7 @@ Assicurati di aver installato [[!DNL Adobe I/O] CLI](https://github.com/adobe/ai
 
 1. Seguire il resto dei prompt e aprire la nuova applicazione in Visual Studio Code (o nell&#39;editor di codice preferito). Contiene l’impalcatura e il codice di esempio per un’applicazione personalizzata.
 
-   Leggi qui i [componenti principali di un&#39;app Firefly](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application).
+   Leggi qui i [componenti principali di un&#39;app Firefly](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
 
    L&#39;applicazione modello sfrutta il nostro [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) per il caricamento, il download e l&#39;orchestrazione dei rendering dell&#39;applicazione, pertanto gli sviluppatori devono solo implementare la logica dell&#39;applicazione personalizzata. All&#39;interno della cartella `actions/<worker-name>`, il file `index.js` è il punto in cui aggiungere il codice personalizzato dell&#39;applicazione.
 
@@ -76,7 +75,7 @@ Manual set up of credentials is removed from troubleshooting and best practices 
 If you did not log in, refer to our troubleshooting guide to [set up credentials manually](troubleshooting.md).
 -->
 
-#### Credenziali di archiviazione degli strumenti per sviluppatori {#developer-tool-credentials}
+#### Credenziali di archiviazione dello strumento per sviluppatori {#developer-tool-credentials}
 
 Lo strumento per sviluppatori utilizzato per testare le applicazioni personalizzate con l&#39;effettivo [!DNL Asset Compute service] richiede un contenitore di archiviazione cloud per ospitare i file di test e per ricevere e visualizzare le rappresentazioni generate dalle applicazioni.
 
@@ -99,7 +98,7 @@ Aggiungi le seguenti credenziali per lo strumento sviluppatore al file ENV nella
 1. Scarica il file da Adobe Developer Console. Vai alla directory principale del progetto e fai clic su &quot;Scarica tutto&quot; nell’angolo in alto a destra. Il file viene scaricato con `<namespace>-<workspace>.json` come nome del file. Effettua una delle operazioni seguenti:
 
    * Rinomina il file come `console.json` e spostalo nella directory principale del progetto.
-   * Facoltativamente, puoi aggiungere il percorso assoluto al file JSON dell’integrazione Adobe Developer Console. Si tratta dello stesso file [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) scaricato nell’area di lavoro del progetto.
+   * Facoltativamente, puoi aggiungere il percorso assoluto al file JSON dell’integrazione Adobe Developer Console. Si tratta dello stesso file [`console.json`](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) scaricato nell’area di lavoro del progetto.
 
       ```conf
       ASSET_COMPUTE_INTEGRATION_FILE_PATH=
@@ -145,7 +144,7 @@ Per eseguire l&#39;applicazione nello strumento sviluppatore, utilizza il comand
 
 Vedi [qui](test-custom-application.md) come testare ed eseguire il debug dell&#39;applicazione. Al termine dello sviluppo dell&#39;applicazione personalizzata, [distribuire l&#39;applicazione personalizzata](deploy-custom-application.md).
 
-## Prova l&#39;applicazione di esempio fornita dall&#39;Adobe {#try-sample}
+## Provare l&#39;applicazione di esempio fornita dall&#39;Adobe {#try-sample}
 
 Di seguito sono riportati alcuni esempi di applicazioni personalizzate:
 
@@ -170,7 +169,7 @@ exports.main = worker(async (source, rendition) => {
 });
 ```
 
-## Chiamare un&#39;API esterna {#call-external-api}
+## Chiamare un’API esterna {#call-external-api}
 
 Nel codice dell’applicazione puoi effettuare chiamate API esterne per facilitare l’elaborazione dell’applicazione. Di seguito è riportato un file di applicazione di esempio che richiama l’API esterna.
 
@@ -192,7 +191,7 @@ Ad esempio, il [`worker-animal-pictures`](https://github.com/adobe/asset-compute
 >For extra authorization for these API calls, see [custom authorization checks](#custom-authorization-checks).
 -->
 
-### Passa parametri personalizzati {#pass-custom-parameters}
+### Trasmettere parametri personalizzati {#pass-custom-parameters}
 
 È possibile trasmettere parametri definiti personalizzati attraverso gli oggetti di rendering. È possibile farvi riferimento all&#39;interno dell&#39;applicazione in [`rendition` istruzioni](https://github.com/adobe/asset-compute-sdk#rendition). Un esempio di oggetto rendering è:
 
@@ -236,7 +235,7 @@ const clientId = params.auth.clientId; // Technical Account client Id
 const orgId = params.auth.orgId; // Experience Cloud Organization
 ```
 
-### Passa le credenziali per i sistemi di terze parti {#pass-credentials-for-tp}
+### Trasmettere le credenziali per i sistemi di terze parti {#pass-credentials-for-tp}
 
 Per gestire le credenziali per altri servizi esterni, trasmetterle come parametri predefiniti sulle azioni. Queste vengono criptate automaticamente durante il transito. Per ulteriori informazioni, consulta [creazione di azioni nella guida per sviluppatori di Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/creating_actions.md). Quindi impostali utilizzando le variabili di ambiente durante la distribuzione. Questi parametri sono accessibili nell’oggetto `params` all’interno dell’azione .
 

@@ -1,52 +1,54 @@
 ---
-title: Imposta l'ambiente di sviluppo richiesto per  [!DNL Asset Compute Service]
-description: Configurazione dell'ambiente sviluppatore per  [!DNL Asset Compute Service] iniziare a creare e testare codice personalizzato.
-translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+title: Imposta l'ambiente di sviluppo richiesto per [!DNL Asset Compute Service]
+description: Configurazione dell'ambiente per sviluppatori per [!DNL Asset Compute Service] per iniziare a creare e testare il codice personalizzato.
+exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
+source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '358'
 ht-degree: 3%
 
 ---
 
+# Configurare un ambiente di sviluppo {#create-dev-environment}
 
-# Configurazione di un ambiente di sviluppo {#create-dev-environment}
+Per creare una configurazione che ti consenta di sviluppare per [!DNL Asset Compute Service], segui questi requisiti e istruzioni.
 
-Per creare una configurazione che consenta di sviluppare [!DNL Asset Compute Service], segui questi requisiti e istruzioni.
+1. [Acquisisci ](https://www.adobe.io/project-firefly/docs/getting_started/#acquire-access-and-credentials) credenziali e accesso per  [!DNL Project Firefly].
 
-1. [Acquisisci accesso e ](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/setup.md#acquire-access-and-credentials) credenziali per Project Firefly.
+1. [Imposta l&#39;](https://www.adobe.io/project-firefly/docs/getting_started/#local-environment-set-up) ambiente locale e gli strumenti necessari.
 
-1. [Configurare l’](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/setup.md#local-environment-set-up) ambiente locale e gli strumenti richiesti.
-
-1. Altri strumenti utili per iniziare a sviluppare in modo uniforme sono:
+1. Altri strumenti che ti aiutano a iniziare lo sviluppo senza problemi sono:
 
    * [Git](https://git-scm.com/).
    * [Docker Desktop](https://www.docker.com/get-started).
-   * [NodeJS](https://nodejs.org) (da v10 a v12 LTS, non sono consigliate versioni dispari) e  [NPM](https://www.npmjs.com). L&#39;utente di OSX HomeBrew può eseguire `brew install node` l&#39;installazione di entrambi. In caso contrario, scaricatelo dalla pagina di download [NodeJS](https://nodejs.org/it/).
-   * Un IDE adatto a NodeJS, si consiglia di [Visual Studio Code (VS Code)](https://code.visualstudio.com) in quanto è l&#39;IDE supportato per il debugger. È possibile utilizzare qualsiasi altro IDE come editor di codice, ma l&#39;utilizzo avanzato (ad es. debugger) non è ancora supportato.
-   * [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`) - installare utilizzando  `npm install -g @adobe/aio-cli`.
+   * [NodeJS](https://nodejs.org)  (da v10 a v12 LTS, non sono consigliate versioni dispari) e  [NPM](https://www.npmjs.com). L&#39;utente di OSX HomeBrew può fare `brew install node` per installare entrambi. In caso contrario, scaricalo dalla [pagina di download di NodeJS](https://nodejs.org/it/).
+   * Un IDE adatto a NodeJS, si consiglia [Codice di Visual Studio (Codice VS)](https://code.visualstudio.com) in quanto è l’IDE supportato per il debugger. Puoi utilizzare qualsiasi altro IDE come editor di codice, ma l’utilizzo avanzato (ad esempio, debugger) non è ancora supportato.
+   * [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`) - installa utilizzando  `npm install -g @adobe/aio-cli@7.1.0`.
 
-1. Assicurarsi di soddisfare i [prerequisiti](/help/understand-extensibility.md#prerequisites-and-provisioning).
+1. Assicurati di soddisfare i [prerequisiti](/help/understand-extensibility.md#prerequisites-and-provisioning).
 
-## Configurazione di un progetto Firefly {#create-firefly-project}
+## Configurare un progetto Firefly {#create-firefly-project}
 
-1. Accedere al ruolo di amministratore di sistema o sviluppatore nell&#39;organizzazione dell&#39;esperienza. Questo può essere impostato da un amministratore di sistema nel Admin Console [](https://adminconsole.adobe.com/overview).
+1. Assicurati il ruolo di amministratore di sistema o sviluppatore nell&#39;organizzazione [!DNL Experience Cloud]. Questo è configurato da un amministratore di sistema nell&#39; [Admin Console](https://adminconsole.adobe.com/overview).
 
-1. Accedete alla [ Adobe Developer Console](https://console.adobe.io/). Assicurati di far parte della stessa organizzazione Adobe Experience Cloud in cui si trova [!DNL Experience Manager] come integrazione [!DNL Cloud Service]. Per ulteriori informazioni  console per sviluppatori di Adobi, consultare la [documentazione della console](https://www.adobe.io/apis/experienceplatform/console/docs.html).
+1. Accedi a [Adobe Developer Console](https://console.adobe.io/). Assicurati di far parte della stessa organizzazione [!DNL Experience Cloud] di [!DNL Experience Manager] come integrazione [!DNL Cloud Service]. Per ulteriori informazioni su Adobe Developer Console, consulta la [documentazione della console](https://www.adobe.io/apis/experienceplatform/console/docs.html).
 
-1. [Crea un progetto](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md) Firefly. Fare clic su **[!UICONTROL Crea nuovo progetto]** > **[!UICONTROL Progetto da template]**. Selezionare lucciola. Crea un nuovo progetto Firefly con due aree di lavoro: `Production` e `Stage`. Aggiungete aree di lavoro aggiuntive, ad esempio `Development`, come necessario.
+1. [Crea un progetto](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md) Firefly. Fai clic su **[!UICONTROL Crea nuovo progetto]** > **[!UICONTROL Progetto da modello]**. Selezionare Firefly. Crea un nuovo progetto Firefly con due aree di lavoro: `Production` e `Stage`. Aggiungi altre aree di lavoro, ad esempio `Development`, in base alle esigenze.
 
-1. Nel progetto Firefly, selezionate un’area di lavoro e iscrivetevi ai servizi necessari per  Asset compute. Fare clic su **Aggiungi a progetto** > **API** e aggiungere `Asset Compute`, `IO Events` e `IO Events Management` servizi. Quando si aggiunge la prima API, viene richiesto di creare una chiave privata. Salvate queste informazioni sul computer in base alle esigenze di questa chiave per testare l&#39;applicazione personalizzata con lo strumento di sviluppo.
+1. Nel progetto Firefly, seleziona un’area di lavoro e abbonati ai servizi necessari per Asset compute. Fai clic su **Aggiungi al progetto** > **API** e aggiungi i servizi `Asset Compute`, `IO Events` e `IO Events Management` . Quando si aggiunge la prima API, viene richiesto di creare una chiave privata. Salvare queste informazioni sul computer in quanto è necessaria questa chiave per testare l’applicazione personalizzata con lo strumento sviluppatore.
 
 ## Passaggio successivo {#next-step}
 
-Ora che l&#39;ambiente è configurato, è possibile [creare un&#39;applicazione personalizzata](develop-custom-application.md).
+Ora che il tuo ambiente è configurato, sei pronto a [creare un&#39;applicazione personalizzata](develop-custom-application.md).
 
-<!-- TBD items for later:
+<!-- More ideas:
  
 * Any steps in the beginning that lead to gotchas later should be called out for caution? For example,
   * don't change some defaults initially
   * know risks when deviating from standard path
   * naming conventions to follow
   * Retrieve and format credentials (YAML file details)
+
+TBD: When aio-cli v8 bugs are resolved, update the AIO CLI install command to remove v7.x reference and instruct users to use the latest version. See CQDOC-18346.
+
 -->
