@@ -7,17 +7,10 @@ role: Developer
 user-guide-title: Guida al servizio Asset compute
 user-guide-description: Questa documentazione tratta le attività [!DNL Asset Compute Service] come sviluppare, gestire, distribuire e risolvere i problemi del codice personalizzato.
 breadcrumb-title: Guida al servizio Asset compute
-breadcrumb-url: /docs/asset-compute/using/home.html
-solution-title: AEM Assets
-solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html
-getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html
-tutorials-title: Esercitazioni su AEM
-tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
-translation-type: tm+mt
-source-git-commit: 3f306f2006ba1520ea5266a93a7912720f96b412
+source-git-commit: c4f224a2ee99e78018a7a3f43ec59907f05ea4ef
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 13%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
