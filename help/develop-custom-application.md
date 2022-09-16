@@ -2,9 +2,9 @@
 title: Sviluppa per [!DNL Asset Compute Service]
 description: Creare applicazioni personalizzate utilizzando [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: a50a3bdb520cbe608c5710716df80ac6e3b486e5
+source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ Prima di iniziare a sviluppare un’applicazione personalizzata:
 
 Assicurati di avere [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) installato localmente.
 
-1. Per creare un&#39;applicazione personalizzata, [creare un progetto App Builder](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Per farlo, esegui `aio app init <app-name>` nel terminale.
+1. Per creare un&#39;applicazione personalizzata, [creare un progetto App Builder](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Per farlo, esegui `aio app init <app-name>` nel terminale.
 
-   Se non hai già effettuato l&#39;accesso, questo comando richiede a un browser di accedere [Console Adobe Developer](https://console.adobe.io/) con il tuo Adobe ID. Vedi [qui](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli) per ulteriori informazioni sull&#39;accesso dal client.
+   Se non hai già effettuato l&#39;accesso, questo comando richiede a un browser di accedere [Console Adobe Developer](https://console.adobe.io/) con il tuo Adobe ID. Vedi [qui](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli) per ulteriori informazioni sull&#39;accesso dal client.
 
-   Adobe consiglia di effettuare l&#39;accesso. In caso di problemi, segui le istruzioni [per creare un&#39;app senza effettuare l&#39;accesso](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   Adobe consiglia di effettuare l&#39;accesso. In caso di problemi, segui le istruzioni [per creare un&#39;app senza effettuare l&#39;accesso](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
 1. Dopo aver effettuato l’accesso, segui le istruzioni contenute in CLI e seleziona la `Organization`, `Project`e `Workspace` da utilizzare per l&#39;applicazione. Scegli il progetto e l’area di lavoro creati quando [configurare l&#39;ambiente](setup-environment.md). Quando viene richiesto `Which extension point(s) do you wish to implement ?`, assicurati di selezionare `DX Asset Compute Worker`:
 
@@ -62,7 +62,7 @@ Assicurati di avere [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) ins
 
 1. Seguire il resto dei prompt e aprire la nuova applicazione in Visual Studio Code (o nell&#39;editor di codice preferito). Contiene l’impalcatura e il codice di esempio per un’applicazione personalizzata.
 
-   Leggi qui [componenti principali di un’app Builder](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
+   Leggi qui [componenti principali di un’app Builder](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-an-app-builder-application).
 
    L&#39;applicazione template sfrutta la nostra [asset compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) per il caricamento, il download e l’orchestrazione dei rendering delle applicazioni, in modo che gli sviluppatori debbano implementare solo la logica dell’applicazione personalizzata. Dentro `actions/<worker-name>` la cartella `index.js` file è il punto in cui aggiungere il codice personalizzato dell&#39;applicazione.
 

@@ -2,9 +2,9 @@
 title: Comprendere il funzionamento di un’applicazione personalizzata
 description: Lavoro interno [!DNL Asset Compute Service] applicazione personalizzata per comprendere il funzionamento.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
-source-git-commit: 07e87c57e57f18f4d6e34ca8529d5598b0b12f3d
+source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Di seguito è riportato un esempio di richiesta di elaborazione personalizzata d
 }
 ```
 
-La [!DNL Asset Compute Service] invia le richieste di rendering dell’applicazione personalizzata all’applicazione personalizzata. Utilizza un POST HTTP per l&#39;URL dell&#39;applicazione fornito, che è l&#39;URL dell&#39;azione Web protetto da Project App Builder. Tutte le richieste utilizzano il protocollo HTTPS per massimizzare la sicurezza dei dati.
+La [!DNL Asset Compute Service] invia le richieste di rendering dell’applicazione personalizzata all’applicazione personalizzata. Utilizza un POST HTTP per l&#39;URL dell&#39;applicazione fornito, che è l&#39;URL dell&#39;azione web protetto da App Builder. Tutte le richieste utilizzano il protocollo HTTPS per massimizzare la sicurezza dei dati.
 
 La [asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) utilizzato da un&#39;applicazione personalizzata per gestire la richiesta HTTP POST. Gestisce anche il download della sorgente, il caricamento di rappresentazioni, l&#39;invio [!DNL Adobe I/O] eventi e gestione degli errori.
 
