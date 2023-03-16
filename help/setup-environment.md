@@ -2,7 +2,7 @@
 title: Imposta l'ambiente di sviluppo necessario per [!DNL Asset Compute Service]
 description: Configurazione dell’ambiente per sviluppatori per [!DNL Asset Compute Service] per iniziare a creare e testare il codice personalizzato.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: 2b690ce37c0bac58abcb745e0b82018541434659
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 3%
@@ -13,9 +13,9 @@ ht-degree: 3%
 
 Per creare una configurazione che consente di sviluppare [!DNL Asset Compute Service], seguire questi requisiti e istruzioni.
 
-1. [Acquisire accesso e credenziali](https://www.adobe.io/project-firefly/docs/getting_started/#acquire-access-and-credentials) per [!DNL Project Firefly].
+1. [Acquisire accesso e credenziali](https://developer.adobe.com/app-builder/docs/getting_started/#acquire-access-and-credentials) per [!DNL Adobe Developer App Builder].
 
-1. [Configurare l’ambiente locale](https://www.adobe.io/project-firefly/docs/getting_started/#local-environment-set-up) e gli strumenti necessari.
+1. [Configurare l’ambiente locale](https://developer.adobe.com/app-builder/docs/getting_started/#local-environment-set-up) e gli strumenti necessari.
 
 1. Altri strumenti che ti aiutano a iniziare lo sviluppo senza problemi sono:
 

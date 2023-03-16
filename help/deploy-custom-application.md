@@ -2,9 +2,9 @@
 title: Distribuzione [!DNL Asset Compute Service] applicazione personalizzata
 description: Distribuzione [!DNL Asset Compute Service] applicazione personalizzata.
 exl-id: a68d4f59-8a8f-43b2-8bc6-19320ac8c9ef
-source-git-commit: 129651ba432b75703bc27baa7081da60302f828d
+source-git-commit: 50f69e16772cee7f79a812f2b86f0ef0221db369
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '190'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ Per ottenere lo stesso URL senza ridistribuire l&#39;applicazione, utilizza [`ai
 
 Utilizza l’URL in un [Profilo di elaborazione in [!DNL Experience Manager] come [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html?lang=it) per integrare l&#39;applicazione con [!DNL Experience Manager] come [!DNL Cloud Service].
 
-Assicurati che il progetto e l’area di lavoro di App Builder corrispondano a [!DNL Experience Manager] come [!DNL Cloud Service] ambiente in cui desideri utilizzare l’azione. Dispone di ambienti diversi per lo sviluppo, la gestione temporanea e la produzione. Puoi verificare l’ambiente controllando `AIO_runtime_*` credenziali definite all&#39;interno del file ENV nella directory principale dell&#39;applicazione Firefly. Ad esempio, per distribuire in un `Stage` l&#39;area di lavoro `AIO_runtime_namespace` è del formato `xxxxxx_xxxxxxxxx_stage`. Per integrare con [!DNL Experience Manager] come [!DNL Cloud Service] Ambiente di produzione, utilizza gli URL dell&#39;applicazione da Firefly `Production` workspace.
+Assicurati che il progetto e l’area di lavoro di App Builder corrispondano a [!DNL Experience Manager] come [!DNL Cloud Service] ambiente in cui desideri utilizzare l’azione. Dispone di ambienti diversi per lo sviluppo, la gestione temporanea e la produzione. Puoi verificare l’ambiente controllando `AIO_runtime_*` credenziali definite all’interno del file ENV nella directory principale dell’applicazione Adobe Developer App Builder. Ad esempio, per distribuire in un `Stage` l&#39;area di lavoro `AIO_runtime_namespace` è del formato `xxxxxx_xxxxxxxxx_stage`. Per integrare con [!DNL Experience Manager] come [!DNL Cloud Service] Ambiente di produzione, utilizza gli URL dell’applicazione dal tuo Adobe Developer App Builder `Production` workspace.
 
 >[!CAUTION]
 >
