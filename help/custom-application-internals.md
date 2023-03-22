@@ -2,9 +2,9 @@
 title: Comprendere il funzionamento di un’applicazione personalizzata
 description: Lavoro interno [!DNL Asset Compute Service] applicazione personalizzata per comprendere il funzionamento.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
-source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
+source-git-commit: 2af710443cdc2e5e25e105eca6e779eb58631ae9
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Utilizza l’illustrazione seguente per comprendere il flusso di lavoro end-to-end quando una risorsa digitale viene elaborata utilizzando un’applicazione personalizzata da un client.
 
-![Flusso di lavoro dell’applicazione personalizzata](assets/customworker.png)
+![Flusso di lavoro dell’applicazione personalizzata](assets/customworker.svg)
 
 *Figura: Passaggi coinvolti nell’elaborazione di una risorsa utilizzando [!DNL Asset Compute Service].*
 
