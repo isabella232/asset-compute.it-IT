@@ -5,7 +5,7 @@ solution: Experience Manager, Experience Manager Assets
 type: Documentation
 role: Developer
 user-guide-title: Guida al servizio Asset compute
-user-guide-description: Questa documentazione copre [!DNL Asset Compute Service] attività quali lo sviluppo, la gestione, la distribuzione e la risoluzione dei problemi del codice personalizzato.
+user-guide-description: 'Questa documentazione tratta i seguenti argomenti: [!DNL Asset Compute Service] attività quali sviluppo, gestione, distribuzione e risoluzione dei problemi relativi al codice personalizzato.'
 breadcrumb-title: Guida al servizio Asset compute
 source-git-commit: a2460a0719f8c585ed72e44c904aa0df33301032
 workflow-type: tm+mt
@@ -15,9 +15,9 @@ ht-degree: 16%
 ---
 
 
-# Guida utente del servizio Asset compute {#using}
+# Guida utente al servizio Asset compute {#using}
 
-+ [Guida utente di Asset compute Service](home.md)
++ [Guida utente del servizio Asset compute](home.md)
 + [Panoramica](introduction.md)
 + [Formati di file supportati](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)
 + [Architettura](architecture.md)
@@ -27,8 +27,8 @@ ht-degree: 16%
    + [Configurazione dell’ambiente](setup-environment.md)
    + [Comprendere i concetti interni di un’app](custom-application-internals.md)
    + [Sviluppare un’applicazione personalizzata](develop-custom-application.md)
-   + [Test di un&#39;applicazione personalizzata](test-custom-application.md)
+   + [Testare un’applicazione personalizzata](test-custom-application.md)
    + [Distribuire un&#39;applicazione personalizzata](deploy-custom-application.md)
-   + [Integrare e utilizzare in [!DNL Experience Manager] come [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html?lang=it)
+   + [Integrare e utilizzare in [!DNL Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html?lang=it)
 + [Risoluzione dei problemi](troubleshooting.md)
 + [Contribuire al progetto open-source](contribute-to-compute-service.md)
